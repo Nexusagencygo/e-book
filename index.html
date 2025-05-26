@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Ganhando Dinheiro com Automações de IA | Oferta Especial</title>
+    <style>
+        :root {
+            --primary: #0f2d52;
+            --secondary: #3a86ff;
+            --accent: #48cae4;
+            --highlight: #00b4d8;
+            --warning: #ff5a5f;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1200&q=60') center/cover;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 45, 82, 0.85);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--accent);
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background-color: var(--warning);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 90, 95, 0.4);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 90, 95, 0.4);
+        }
+        
+        .countdown {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 30px 0;
+        }
+        
+        .countdown-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .countdown-item {
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            background-color: var(--primary);
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 60px;
+            display: inline-block;
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            color: var(--light);
+            margin-top: 5px;
+        }
+        
+        .benefits {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            color: rgba(58, 134, 255, 0.2);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-name {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .author-title {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+        
+        .feature-icon {
+            background-color: var(--accent);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .feature-content {
+            flex: 1;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .pricing {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        
+        .price-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background-color: var(--warning);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: bold;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .current-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .price-description {
+            margin-bottom: 30px;
+        }
+        
+        .guarantee {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .guarantee-badge {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+        }
+        
+        .faq {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            background-color: white;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            background-color: var(--light);
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: var(--light);
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+                min-width: 40px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animações */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Estilos para o botão de fechar modal */
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">AutomationPro</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>DESTRAVE O LUCRO COM IA: O Guia DEFINITIVO Para Ganhar Dinheiro Criando Automações Inteligentes</h1>
+                <p class="subtitle">Transforme seu conhecimento em uma fonte de renda lucrativa dominando as ferramentas e estratégias de automação com Inteligência Artificial</p>
+                
+                <div class="countdown">
+                    <p class="countdown-title">OFERTA ESPECIAL DE LANÇAMENTO TERMINA EM:</p>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">02</div>
+                            <div class="countdown-label">Dias</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">23</div>
+                            <div class="countdown-label">Horas</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">59</div>
+                            <div class="countdown-label">Minutos</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">59</div>
+                            <div class="countdown-label">Segundos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#pricing" class="cta-primary pulse">QUERO GARANTIR MEU ACESSO AGORA!</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Por Que Este Guia É Diferente?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3 class="benefit-title">Conhecimento Prático</h3>
+                    <p>Não é teoria. São estratégias testadas e comprovadas que você pode implementar imediatamente para começar a lucrar.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3 class="benefit-title">Retorno Rápido</h3>
+                    <p>Aprenda a precificar seus serviços corretamente e recupere o investimento no guia com seu primeiro cliente.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔍</div>
+                    <h3 class="benefit-title">Passo a Passo Detalhado</h3>
+                    <p>Guias ilustrados e explicações minuciosas de cada ferramenta e estratégia, sem "segredos guardados".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Aprender</h2>
+            
+            <div class="feature-item">
+                <div class="feature-icon">1</div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Modelos de Negócios Lucrativos em Automação com IA</h3>
+                    <p>Descubra as 4 estruturas de negócio mais rentáveis no mercado de automação, desde serviços especializados até produtos SaaS, e escolha a que melhor se adapta ao seu perfil.</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">2</div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Domínio Completo das Ferramentas Essenciais</h3>
+                    <p>Aprenda a utilizar com maestria as principais ferramentas do mercado: Zapier, ClickUp, Notion AI, ChatGPT, Drift e muito mais, com tutoriais passo a passo e casos práticos.</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">3</div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Estratégias Avançadas de Prospecção de Clientes</h3>
+                    <p>Técnicas poderosas para identificar, qualificar e abordar clientes ideais, utilizando a própria IA para automatizar parte do processo e aumentar suas taxas de conversão.</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">4</div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Comunicação e Relacionamento Profissional</h3>
+                    <p>Domine a arte de construir relacionamentos duradouros com clientes, desde a abordagem inicial até o pós-venda, garantindo projetos recorrentes e indicações valiosas.</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">5</div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Precificação Estratégica e Lucrativa</h3>
+                    <p>Aprenda a definir preços que refletem o real valor do seu trabalho, com modelos de precificação testados e scripts de negociação que eliminam a insegurança na hora de apresentar valores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O Que Dizem Nossos Alunos</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Eu estava perdido tentando entender como monetizar meu conhecimento em IA. Este guia me deu um norte claro e, em menos de 30 dias, fechei meu primeiro contrato de R$ 4.500 para automatizar processos de uma pequena empresa.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de Rafael" class="author-avatar">
+                        <div>
+                            <div class="author-name">Rafael Mendes</div>
+                            <div class="author-title">Desenvolvedor Web</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">A parte de precificação valeu cada centavo investido! Eu estava cobrando muito abaixo do mercado pelos meus serviços. Após aplicar as estratégias do guia, aumentei meus preços em 70% e continuo fechando projetos!</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Camila" class="author-avatar">
+                        <div>
+                            <div class="author-name">Camila Oliveira</div>
+                            <div class="author-title">Consultora de Marketing Digital</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Eu não tinha experiência com programação, mas mesmo assim consegui criar automações valiosas usando as ferramentas no-code explicadas no guia. Hoje tenho 3 clientes fixos que me pagam mensalmente para manter suas automações.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Foto de André" class="author-avatar">
+                        <div>
+                            <div class="author-name">André Souza</div>
+                            <div class="author-title">Ex-Analista Administrativo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Investimento</h2>
+            
+            <div class="price-card">
+                <div class="price-badge">OFERTA LIMITADA</div>
+                <h3>Guia Completo: Ganhando Dinheiro com Automações de IA</h3>
+                <p class="original-price">De R$ 297</p>
+                <p class="current-price">Por R$ 47</p>
+                <p class="price-description">Acesso imediato e vitalício ao guia completo + atualizações futuras</p>
+                
+                <ul style="text-align: left; margin-bottom: 30px; list-style-type: none;">
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <span style="color: #48cae4; margin-right: 10px;">✓</span> E-book completo
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <span style="color: #48cae4; margin-right: 10px;">✓</span> Guias passo a passo ilustrados
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <span style="color: #48cae4; margin-right: 10px;">✓</span> Scripts de abordagem e negociação
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <span style="color: #48cae4; margin-right: 10px;">✓</span> Modelos de proposta e contrato
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                        <span style="color: #ff5a5f; margin-right: 10px; font-weight: bold;">BÔNUS:</span> Masterclass "As 3 Automações Mais Lucrativas de 2025"
+                    </li>
+                </ul>
+                
+                <a href="checkout.html" class="cta-primary pulse">QUERO GARANTIR MEU ACESSO AGORA!</a>
+                
+                <p style="margin-top: 20px; font-size: 0.9rem; color: var(--gray);">
+                    Pagamento único e seguro via PIX, cartão de crédito ou boleto
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="guarantee">
+        <div class="container">
+            <img src="https://cdn-icons-png.flaticon.com/512/1067/1067357.png" alt="Selo de garantia" class="guarantee-badge">
+            <h2 class="section-title">Garantia Incondicional de 30 Dias</h2>
+            <p>Se por qualquer motivo você não ficar satisfeito com o conteúdo, basta solicitar o reembolso em até 30 dias após a compra e devolveremos 100% do seu investimento, sem perguntas.</p>
+        </div>
+    </section>
+    
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Preciso ter conhecimento prévio em programação?</div>
+                <div class="faq-answer">
+                    <p>Não! O guia foi desenvolvido para ser acessível tanto para iniciantes quanto para pessoas com experiência. Focamos em ferramentas no-code/low-code que não exigem conhecimento avançado de programação, além de explicar tudo passo a passo.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Como recebo o material após a compra?</div>
+                <div class="faq-answer">
+                    <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com as instruções de acesso ao material. O e-book está em formato PDF e pode ser lido em qualquer dispositivo.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Quanto tempo leva para começar a ter resultados?</div>
+                <div class="faq-answer">
+                    <p>Isso varia de acordo com sua dedicação e aplicação das estratégias. Temos alunos que conseguiram fechar seus primeiros clientes em menos de 30 dias após estudar o material. O guia é prático e focado em resultados rápidos.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">As ferramentas mencionadas no guia são gratuitas?</div>
+                <div class="faq-answer">
+                    <p>Abordamos tanto ferramentas gratuitas quanto pagas. A maioria das ferramentas possui versões gratuitas ou trials que permitem você começar sem investimento. No guia, explicamos como maximizar o uso das versões gratuitas e quando faz sentido investir nas versões pagas.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">O que acontece se eu não conseguir aplicar as estratégias?</div>
+                <div class="faq-answer">
+                    <p>Oferecemos garantia de 30 dias. Se você sentir que o material não atendeu suas expectativas ou não conseguiu aplicar as estratégias, basta solicitar o reembolso e devolveremos 100% do seu investimento, sem questionamentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Não Perca Esta Oportunidade!</h2>
+            <p class="cta-subtitle">O mercado de automação com IA está em explosivo crescimento. Quem dominar essas habilidades agora estará à frente da concorrência nos próximos anos.</p>
+            <a href="#pricing" class="cta-primary pulse">QUERO GARANTIR MEU ACESSO AGORA!</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Termos de Uso</a>
+                <a href="#" class="footer-link">Política de Privacidade</a>
+                <a href="#" class="footer-link">Contato</a>
+            </div>
+            <p class="copyright">© 2025 AutomationPro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Contador regressivo
+        function updateCountdown() {
+            const now = new Date();
+            const endDate = new Date();
+            endDate.setDate(now.getDate() + 3); // 3 dias a partir de hoje
+            endDate.setHours(23, 59, 59, 0);
+            
+            const diff = endDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
